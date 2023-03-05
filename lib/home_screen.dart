@@ -37,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _onTapTopic(int index){
     switch(index){
-      case 1:{
-
+      case 0:{
+        print("Row column clicked");
         break;
       }
     }

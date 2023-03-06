@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/topics/row_column_screen.dart';
+import 'package:flutter_practice/topics/widget_lifecycle_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> _topics = ["Row & Column", "Container"];
+  final List<String> _topics = ["Row & Column", "Widget Lifecycle"];
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
       case 0:
         {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const RowColumnScreen()));
+          break;
+        }
+      case 1:
+        {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetLifeCycleScreen()));
           break;
         }
     }

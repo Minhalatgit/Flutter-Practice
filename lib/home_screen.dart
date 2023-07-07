@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/inherited_widgets/root_widget.dart';
+import 'package:flutter_practice/topics/inherited_widget_screen.dart';
 import 'package:flutter_practice/topics/row_column_screen.dart';
 import 'package:flutter_practice/topics/widget_lifecycle_screen.dart';
 
@@ -10,7 +12,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> _topics = ["Row & Column", "Widget Lifecycle"];
+  final List<String> _topics = [
+    "Row & Column",
+    "Widget Lifecycle",
+    "Inherited Widget",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const WidgetLifeCycleScreen()));
+          break;
+        }
+      case 2:
+        {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const RootWidget()));
           break;
         }
     }
